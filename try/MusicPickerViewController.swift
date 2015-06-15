@@ -119,6 +119,11 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
     var buttonStopPlaying: UIButton?
     var mediaPicker: MPMediaPickerController?
     
+    var itemURL: NSURL!
+    var itemTitle: String!
+    var itemArtist: String!
+    var itemArtwork: MPMediaItemArtwork!
+    
     func musicPlayerStateChanged(notification: NSNotification){
         
         println("Player State Changed")
@@ -190,6 +195,19 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
             /* Instantiate the music player */
             for thisItem in mediaItemCollection.items as! [MPMediaItem]{
                 
+                self.itemURL = thisItem.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
+                
+                println("ItemURL \(self.itemURL)")
+                
+                self.itemTitle = thisItem.valueForProperty(MPMediaItemPropertyTitle) as! String
+                
+                println("ItemTitle \(self.itemTitle)")
+                
+                self.itemArtist = thisItem.valueForProperty(MPMediaItemPropertyArtist) as! String
+                
+                println("ItemArtist \(self.itemArtist)")
+                
+                /*
                 let itemUrl = thisItem.valueForProperty(MPMediaItemPropertyAssetURL)
                     as? NSURL
                 
@@ -222,7 +240,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
                 if let artwork = itemArtwork{
                     println("Item Artwork = \(artwork)")
                 }
-                
+                */
             }
 
             myMusicPlayer = MPMusicPlayerController()

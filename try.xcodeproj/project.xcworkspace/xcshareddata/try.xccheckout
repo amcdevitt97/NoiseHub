@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>558FD9F7-667F-4FD5-B155-DCEA81B0FEF4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>try</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E097C0F93204E97B3BAEF9315B70F1325B6C5CD2</key>
+		<string>https://github.com/amcdevitt97/NoiseHub.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>try.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E097C0F93204E97B3BAEF9315B70F1325B6C5CD2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/amcdevitt97/NoiseHub.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E097C0F93204E97B3BAEF9315B70F1325B6C5CD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E097C0F93204E97B3BAEF9315B70F1325B6C5CD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NoiseHub</string>
+		</dict>
+	</array>
+</dict>
+</plist>
