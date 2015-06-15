@@ -207,6 +207,8 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
                 
                 println("ItemArtist \(self.itemArtist)")
                 
+                //The artwork was causing issues.
+                
                 /*
                 let itemUrl = thisItem.valueForProperty(MPMediaItemPropertyAssetURL)
                     as? NSURL
