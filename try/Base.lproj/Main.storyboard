@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rBw-zZ-eia">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="HRR-xL-7Nu">
+            <objects>
+                <viewController id="JnW-gq-2ZI" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IkL-AJ-iam">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Back">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <tabBarItem key="tabBarItem" title="Messages" id="l0P-8n-47a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXy-Dw-MNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.7999999999999998" y="473.33333333333331"/>
+        </scene>
+        <!--Music Picker View Controller-->
+        <scene sceneID="gRN-c8-kKb">
+            <objects>
+                <viewController id="gjZ-Uq-ogQ" customClass="MusicPickerViewController" customModule="try" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hZ4-Ub-S8W"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mpa-q3-02o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n9k-3Q-qSk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="VFi-6Y-PxH">
+                                <rect key="frame" x="17" y="105" width="72" height="68"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJu-er-5a7">
+                                <rect key="frame" x="17" y="181" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sK-lk-fmk">
+                                <rect key="frame" x="16" y="221" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4US-Id-s0s">
+                                <rect key="frame" x="16" y="336" width="289" height="48"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                                <state key="normal" title="MAKE SOME NOISE">
+                                    <color key="titleColor" red="0.61366273729999998" green="0.83771306820000002" blue="0.55205948770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7c-LO-lvt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="266-gV-pZ2">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="barTintColor" red="0.61366273734460697" green="0.83771306818181812" blue="0.55205948768573732" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Post a Noise" id="uGd-wn-Cj4">
+                                        <barButtonItem key="rightBarButtonItem" title="Upload" id="K3O-Cw-UtL">
+                                            <color key="tintColor" red="0.98964204054133043" green="0.95637986648867435" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="UploadButton:" destination="gjZ-Uq-ogQ" id="Ymb-q0-Ga1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KU-2S-1M2">
+                                <rect key="frame" x="70" y="181" width="234" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-KT-8n1">
+                                <rect key="frame" x="70" y="221" width="234" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7B-t0-SLN">
+                                <rect key="frame" x="17" y="250" width="157" height="30"/>
+                                <state key="normal" title="Upload Photos (max 4)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is where a user can post information about their song choice." translatesAutoresizingMaskIntoConstraints="NO" id="WBn-ht-miD">
+                                <rect key="frame" x="97" y="108" width="207" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="artistLabel" destination="6KU-2S-1M2" id="ujb-qZ-DJn"/>
+                        <outletCollection property="artistLabel" destination="6KU-2S-1M2" id="np8-Uh-EvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecX-hc-3ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-418"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="DYe-aD-eic">
+            <objects>
+                <viewController id="vVx-aE-Llk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g0J-Yb-dyC"/>
+                        <viewControllerLayoutGuide type="bottom" id="moY-Hs-RrQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vpZ-Nd-AIh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXg-5a-mno">
+                                <rect key="frame" x="117" y="269" width="88" height="30"/>
+                                <state key="normal" title="Post a Noise">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gjZ-Uq-ogQ" kind="modal" id="xvH-N1-m8k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="DXg-5a-mno" secondAttribute="centerX" constant="-0.5" id="5i3-mo-JqN"/>
+                            <constraint firstAttribute="centerY" secondItem="DXg-5a-mno" secondAttribute="centerY" id="VkU-3u-IOb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="xBj-sf-DKP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaU-Ct-GEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.199999999999999" y="-417.48000000000002"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="BJK-ea-pPc">
+            <objects>
+                <viewController id="jnJ-gj-m0M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RUF-TK-dt8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aQT-jk-OBm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yOA-Pi-8uf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basic privacy and account settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTP-tm-Vsh">
+                                <rect key="frame" x="48" y="145" width="269" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ll-Ar-dCG">
+                                <rect key="frame" x="165" y="228" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Und-7r-m4X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ar-il-B5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790.93333333333328" y="618.17333333333329"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="i1V-EY-1aP">
+            <objects>
+                <tabBarController id="rBw-zZ-eia" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ett-V6-G3E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vVx-aE-Llk" kind="relationship" relationship="viewControllers" id="hVm-Uf-XAR"/>
+                        <segue destination="TTo-Hb-qZV" kind="relationship" relationship="viewControllers" id="Mrv-Ma-Mo6"/>
+                        <segue destination="JnW-gq-2ZI" kind="relationship" relationship="viewControllers" id="qcr-r5-Z02"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5y-Fb-O9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353.06666666666666" y="-417.48000000000002"/>
+        </scene>
+        <!--Jukebox-->
+        <scene sceneID="MiX-3h-cQq">
+            <objects>
+                <viewController id="TTo-Hb-qZV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3sg-UH-nS6"/>
+                        <viewControllerLayoutGuide type="bottom" id="60Z-XT-J4M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b3X-Za-WLS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where trending artists and songs are displayed" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eay-4L-OE8">
+                                <rect key="frame" x="43" y="131" width="194" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="hLs-vq-YKM"/>
+                                    <constraint firstAttribute="height" constant="71" id="vQS-Ob-wGh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-rv-tJy">
+                                <rect key="frame" x="123" y="276" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mhf-rv-tJy" firstAttribute="top" secondItem="eay-4L-OE8" secondAttribute="bottom" constant="74" id="P8Q-EX-Pu9"/>
+                            <constraint firstItem="mhf-rv-tJy" firstAttribute="leading" secondItem="b3X-Za-WLS" secondAttribute="leadingMargin" constant="107" id="ZGs-Io-VdG"/>
+                            <constraint firstItem="eay-4L-OE8" firstAttribute="leading" secondItem="b3X-Za-WLS" secondAttribute="leadingMargin" constant="27" id="h8e-wn-Ux1"/>
+                            <constraint firstItem="eay-4L-OE8" firstAttribute="top" secondItem="3sg-UH-nS6" secondAttribute="bottom" constant="111" id="qBS-YE-9Mf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Jukebox" id="whX-jj-DGq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izY-4C-EbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353.06666666666666" y="473.33333333333331"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="User" width="200" height="200"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
