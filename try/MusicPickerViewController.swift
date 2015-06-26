@@ -110,20 +110,25 @@ import AVFoundation
 
 class MusicPickerViewController: UIViewController,
 MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
-
     
-    @IBOutlet weak var songLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet var artistLabel: UILabel!
+    @IBOutlet var songLabel: UILabel!
+   // @IBOutlet var albumImage: UIImageView!
+    @IBOutlet var postText: UITextView!
+    @IBOutlet var sendButton: UIBarButtonItem!
+    
     var myMusicPlayer: MPMusicPlayerController?
     var buttonPickAndPlay: UIButton?
     var buttonStopPlaying: UIButton?
     var mediaPicker: MPMediaPickerController?
     
-    var itemURL: NSURL!
-    var itemTitle: String!
-    var itemArtist: String!
-    var itemArtwork: MPMediaItemArtwork!
     
+    @IBAction func sendPressed(sender: AnyObject) {
+        
+        let userPostText = postText.text
+        //then upload info to parse instead of just clearing
+        postText.text = "Post Sent! Thanks."
+    }
     func musicPlayerStateChanged(notification: NSNotification){
         
         println("Player State Changed")
@@ -191,41 +196,28 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
         didPickMediaItems mediaItemCollection: MPMediaItemCollection!){
             
             println("Media Picker returned")
-             println("Media item selected")
+            println("Media item selected")
             /* Instantiate the music player */
             for thisItem in mediaItemCollection.items as! [MPMediaItem]{
                 
-                self.itemURL = thisItem.valueForProperty(MPMediaItemPropertyAssetURL) as! NSURL
-                
-                println("ItemURL \(self.itemURL)")
-                
-                self.itemTitle = thisItem.valueForProperty(MPMediaItemPropertyTitle) as! String
-                
-                println("ItemTitle \(self.itemTitle)")
-                
-                self.itemArtist = thisItem.valueForProperty(MPMediaItemPropertyArtist) as! String
-                
-                println("ItemArtist \(self.itemArtist)")
-                
-                //The artwork was causing issues.
-                
-                /*
                 let itemUrl = thisItem.valueForProperty(MPMediaItemPropertyAssetURL)
                     as? NSURL
                 
                 let itemTitle =
                 thisItem.valueForProperty(MPMediaItemPropertyTitle)
                     as? String
-                self.songLabel.text = itemTitle
                 
                 let itemArtist =
                 thisItem.valueForProperty(MPMediaItemPropertyArtist)
                     as? String
-               self.artistLabel.text = itemArtist
+                artistLabel.text = itemArtist
+                songLabel.text = itemTitle
                 let itemArtwork =
                 thisItem.valueForProperty(MPMediaItemPropertyArtwork)
                     as? MPMediaItemArtwork
                 
+               // let artworkImage = itemArtwork!.imageWithSize(albumImage.bounds.size)
+             //   albumImage.image = artworkImage
                 
                 if let url = itemUrl{
                     println("Item URL = \(url)")
@@ -242,9 +234,9 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
                 if let artwork = itemArtwork{
                     println("Item Artwork = \(artwork)")
                 }
-                */
+                
             }
-
+            
             myMusicPlayer = MPMusicPlayerController()
             
             if let player = myMusicPlayer{
@@ -288,7 +280,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
         mediaPicker.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func stopPlayingAudio() {
+    func stopPlayingAudio(){
         
         NSNotificationCenter.defaultCenter().removeObserver(self)
         
@@ -297,7 +289,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
         }
         
     }
-
+    
     func displayMediaPickerAndPlayItem(){
         
         mediaPicker = MPMediaPickerController(mediaTypes: .AnyAudio)
@@ -310,7 +302,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
             picker.allowsPickingMultipleItems = true
             picker.showsCloudItems = true
             picker.prompt = "Pick a song please..."
-//            view.addSubview(picker.view)
+            //            view.addSubview(picker.view)
             
             presentViewController(picker, animated: true, completion: nil)
             
@@ -325,20 +317,20 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
         
         title = "Media picker..."
         
-//        buttonPickAndPlay = UIButton.buttonWithType(.System) as? UIButton
-//        
-//        if let pickAndPlay = buttonPickAndPlay{
-//            pickAndPlay.frame = CGRect(x: 0, y: 0, width: 200, height: 37)
-//            pickAndPlay.center = CGPoint(x: view.center.x, y: view.center.y - 50)
-//            pickAndPlay.setTitle("Pick and Play", forState: .Normal)
-//            pickAndPlay.addTarget(self,
-//                action: "displayMediaPickerAndPlayItem",
-//                forControlEvents: .TouchUpInside)
-//            let image = UIImage(named: "upload.png")
-//            
-//            pickAndPlay.setBackgroundImage(image, forState: UIControlState.Normal)
-//            view.addSubview(pickAndPlay)
-//        }
+        //        buttonPickAndPlay = UIButton.buttonWithType(.System) as? UIButton
+        //
+        //        if let pickAndPlay = buttonPickAndPlay{
+        //            pickAndPlay.frame = CGRect(x: 0, y: 0, width: 200, height: 37)
+        //            pickAndPlay.center = CGPoint(x: view.center.x, y: view.center.y - 50)
+        //            pickAndPlay.setTitle("Pick and Play", forState: .Normal)
+        //            pickAndPlay.addTarget(self,
+        //                action: "displayMediaPickerAndPlayItem",
+        //                forControlEvents: .TouchUpInside)
+        //            let image = UIImage(named: "upload.png")
+        //
+        //            pickAndPlay.setBackgroundImage(image, forState: UIControlState.Normal)
+        //            view.addSubview(pickAndPlay)
+        //        }
         
         buttonStopPlaying = UIButton.buttonWithType(.System) as? UIButton
         
@@ -374,7 +366,7 @@ MPMediaPickerControllerDelegate, AVAudioPlayerDelegate {
         } else {
             println("Could not instantiate a media picker")
         }
-
+        
     }
     
     

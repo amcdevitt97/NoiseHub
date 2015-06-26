@@ -257,6 +257,7 @@
 		F7F5DEF91AE1FB5D000FD6A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Alyssa McDevitt";
 				TargetAttributes = {
@@ -454,6 +455,7 @@
 					"$(PROJECT_DIR)/try",
 				);
 				INFOPLIST_FILE = try/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "try/try-Bridging-Header.h";
@@ -471,6 +473,7 @@
 					"$(PROJECT_DIR)/try",
 				);
 				INFOPLIST_FILE = try/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "try/try-Bridging-Header.h";
