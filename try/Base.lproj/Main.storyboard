@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rBw-zZ-eia">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rBw-zZ-eia">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,7 +17,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <tabBarItem key="tabBarItem" title="Messages" id="l0P-8n-47a"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages" id="l0P-8n-47a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXy-Dw-MNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,7 +159,7 @@
                             <constraint firstAttribute="centerY" secondItem="DXg-5a-mno" secondAttribute="centerY" id="VkU-3u-IOb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="xBj-sf-DKP"/>
+                    <tabBarItem key="tabBarItem" tag="5" title="Home" image="home" id="xBj-sf-DKP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaU-Ct-GEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,15 +195,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="Und-7r-m4X"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Und-7r-m4X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ar-il-B5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-790.93333333333328" y="618.17333333333329"/>
+            <point key="canvasLocation" x="-837" y="225"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i1V-EY-1aP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5y-Fb-O9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="rBw-zZ-eia" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ett-V6-G3E">
@@ -214,13 +215,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="vVx-aE-Llk" kind="relationship" relationship="viewControllers" id="hVm-Uf-XAR"/>
-                        <segue destination="TTo-Hb-qZV" kind="relationship" relationship="viewControllers" id="Mrv-Ma-Mo6"/>
                         <segue destination="JnW-gq-2ZI" kind="relationship" relationship="viewControllers" id="qcr-r5-Z02"/>
+                        <segue destination="TTo-Hb-qZV" kind="relationship" relationship="viewControllers" id="Mrv-Ma-Mo6"/>
+                        <segue destination="jnJ-gj-m0M" kind="relationship" relationship="viewControllers" id="E3r-g2-Bz7"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5y-Fb-O9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-353.06666666666666" y="-417.48000000000002"/>
+            <point key="canvasLocation" x="-453" y="-479"/>
         </scene>
         <!--Jukebox-->
         <scene sceneID="MiX-3h-cQq">
@@ -262,7 +263,7 @@
                             <constraint firstItem="eay-4L-OE8" firstAttribute="top" secondItem="3sg-UH-nS6" secondAttribute="bottom" constant="111" id="qBS-YE-9Mf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jukebox" id="whX-jj-DGq"/>
+                    <tabBarItem key="tabBarItem" title="Jukebox" image="juke" id="whX-jj-DGq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izY-4C-EbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,6 +272,10 @@
     </scenes>
     <resources>
         <image name="User" width="200" height="200"/>
+        <image name="home" width="30" height="30"/>
+        <image name="juke" width="40" height="40"/>
+        <image name="messages" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
